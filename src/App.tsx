@@ -15,7 +15,7 @@ function App() {
   }, []);
 
   const colDefs = [
-    { field: "symbol" },
+    { field: "symbol", filter: true, floatingFilter: true },
     { field: "price" },
     { field: "pnl" },
     { field: "sparkline" },
