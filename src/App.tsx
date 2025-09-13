@@ -15,10 +15,10 @@ function App() {
   }, []);
 
   const colDefs = [
-    { field: "symbol", filter: true, floatingFilter: true },
-    { field: "price" },
-    { field: "pnl" },
-    { field: "sparkline" },
+    { field: "symbol", filter: true, floatingFilter: true, flex: 1 },
+    { field: "price", flex: 1 },
+    { field: "pnl", flex: 1 },
+    { field: "sparkline", flex: 1 },
   ];
 
   return <Grid rowData={instruments} colDefs={colDefs} />;
