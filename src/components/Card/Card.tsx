@@ -37,7 +37,7 @@ const Card: React.FC<CardProps> = ({
           <span className={styles["tile__symbol-name"]}>{symbolName}</span>
         </div>
         <div className={styles["tile__line-chart"]}>
-          <LineChart data={data} />
+          <LineChart data={data} height={100} />
         </div>
       </div>
     </>
