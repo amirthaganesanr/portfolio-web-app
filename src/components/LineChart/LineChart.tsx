@@ -1,10 +1,11 @@
 import { AreaChart, Area, ResponsiveContainer } from "recharts";
 import type { LineChartProps } from "@/types/LineChart.types";
+import styles from "./LineChart.module.css";
 
 const LineChart: React.FC<LineChartProps> = ({ data }) => {
   const chartsData = data.map((value) => ({ key: value }));
   return (
-    <div style={{ height: 400, width: 500 }}>
+    <div className={styles.container}>
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart
           data={chartsData}

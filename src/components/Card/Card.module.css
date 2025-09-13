@@ -1,0 +1,53 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 12px;
+  width: fit-content;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.tile__value-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tile__title-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 240px;
+}
+
+.tile__indicator {
+  background-color: #d4edda;
+  border-radius: 12px;
+  padding: 2px 6px;
+  color: #155724;
+  font-size: 12px;
+}
+
+.tile__indicator-negative {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.tile__title {
+  margin-left: -6px;
+  color: grey;
+  font-size: 12px;
+}
+
+.tile__value {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.tile__symbol-container {
+  background-color: whitesmoke;
+  border-radius: 12px;
+  padding: 2px 4px;
+  font-size: 12px;
+  width: fit-content;
+  color: gray;
+}
