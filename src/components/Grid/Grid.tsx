@@ -2,16 +2,18 @@ import { AgGridReact } from "ag-grid-react";
 import type { GridProps } from "@/types/Grid.types";
 import styles from "./Grid.module.css";
 import LineChart from "../LineChart/LineChart";
+import type { CardCellRendererProps } from "@/types/Grid.types";
+import type { SparkLineItem } from "@/types/Instrument.types";
 
-const CardCellRenderer = () => {
-  const data = [1, 2, 3, 4, 5, 4, 3, 2, 5, 6];
+const CardCellRenderer: React.FC<CardCellRendererProps> = (params) => {
+  const data = params?.data?.sparkline?.map((s: SparkLineItem) => s.level);
 
   return <LineChart data={data} height={40} />;
 };
 
 const Grid: React.FC<GridProps> = ({ rowData, colDefs }) => {
   const updatedColDefs = colDefs.map((col) =>
-    col.field === "make" ? { ...col, cellRenderer: CardCellRenderer } : col
+    col.field === "sparkline" ? { ...col, cellRenderer: CardCellRenderer } : col
   );
 
   return (
