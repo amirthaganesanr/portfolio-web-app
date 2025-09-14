@@ -35,12 +35,12 @@ const Card: React.FC<CardProps> = ({
             {prefix ? `${prefix} ${formatNumber(value)}` : formatNumber(value)}
           </span>
         </div>
-        <div className={styles["tile__symbol-container"]}>
-          {symbol && (
+        {symbol && (
+          <div className={styles["tile__symbol-container"]}>
             <span className={styles["tile__symbol"]}>({symbol}) </span>
-          )}
-          <span className={styles["tile__symbol-name"]}>{symbolName}</span>
-        </div>
+            <span className={styles["tile__symbol-name"]}>{symbolName}</span>
+          </div>
+        )}
         <div className={styles["tile__line-chart"]}>
           <LineChart data={sparkLine} height={100} negative={negativeValue} />
         </div>

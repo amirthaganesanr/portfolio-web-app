@@ -1,10 +1,32 @@
-.cards-container {
+.cardsContainer {
   display: flex;
   justify-content: space-between;
   padding: 0px 42px;
-  gap: 20px;
+  gap: 50px;
 }
 
 .title {
-  color: white;
+  color: var(--body-text-color);
+}
+
+.button {
+  border: 1px solid var(--body-text-color);
+  color: var(--body-text-color);
+  padding: 2px;
+  border-radius: 5px;
+  cursor: pointer;
+  background: none;
+}
+
+@media (max-width: 800px) {
+  .cardsContainer {
+    display: none;
+  }
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }

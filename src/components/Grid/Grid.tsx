@@ -18,7 +18,7 @@ const Grid: React.FC<GridProps> = ({ rowData, colDefs }) => {
   );
 
   return (
-    <div className={styles["grid-container"]}>
+    <div className={styles.gridContainer}>
       <div className={styles["portfolio-grid"]}>
         <AgGridReact rowData={rowData} columnDefs={updatedColDefs} />
       </div>

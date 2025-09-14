@@ -5,9 +5,9 @@ import { colDefs } from "./utils/constants";
 
 ModuleRegistry.registerModules([AllCommunityModule]);
 
-import { useInstrumentsStore } from "./store/instrumentsStore";
-import { useFetchInstruments } from "./hooks/useFetchInstruments";
 import Overview from "./components/Overview/Overview";
+import { useFetchInstruments } from "./hooks/useFetchInstruments";
+import { useInstrumentsStore } from "./store/instrumentsStore";
 
 function App() {
   const { instruments } = useInstrumentsStore();

@@ -19,6 +19,7 @@ const initialOverviewData: OverviewData = {
 export const useInstrumentsStore = create<InstrumentState>((set, get) => ({
   instruments: [],
   overviewData: initialOverviewData,
+  darkMode: false,
 
   fetchAll: async () => {
     const data = await fetchInstruments();
@@ -42,5 +43,8 @@ export const useInstrumentsStore = create<InstrumentState>((set, get) => ({
         topLoser,
       },
     });
+  },
+  toggleDarkMode: () => {
+    set({ darkMode: !get().darkMode });
   },
 }));
