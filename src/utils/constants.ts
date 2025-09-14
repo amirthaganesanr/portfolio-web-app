@@ -1,4 +1,8 @@
-import type { OverviewConfigItem } from "@/types/Overview.types";
+import type {
+  OverviewConfigItem,
+  OverviewData,
+  OverviewItem,
+} from "@/types/Overview.types";
 
 export const colDefs = [
   {
@@ -33,3 +37,16 @@ export const overviewConfig: OverviewConfigItem[] = [
     prefix: "$",
   },
 ];
+
+export const emptyOverviewItem: OverviewItem = {
+  value: 0,
+  pnl: 0,
+  symbol: "",
+  data: [],
+};
+
+export const initialOverviewData: OverviewData = {
+  totalPortfolioValue: emptyOverviewItem,
+  topGainer: emptyOverviewItem,
+  topLoser: emptyOverviewItem,
+};
