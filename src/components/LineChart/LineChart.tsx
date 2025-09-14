@@ -2,7 +2,7 @@ import { AreaChart, Area, ResponsiveContainer } from "recharts";
 import type { LineChartProps } from "@/types/LineChart.types";
 import styles from "./LineChart.module.css";
 
-const LineChart: React.FC<LineChartProps> = ({ data, height }) => {
+const LineChart: React.FC<LineChartProps> = ({ data, height, negative }) => {
   const chartsData = data.map((value) => ({ key: value }));
   return (
     <div className={styles.container} style={{ height: height }}>
@@ -20,12 +20,16 @@ const LineChart: React.FC<LineChartProps> = ({ data, height }) => {
               <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8} />
               <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
             </linearGradient>
+            <linearGradient id="negativeGradient" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="5%" stopColor="#ff4d4f" stopOpacity={0.8} />{" "}
+              <stop offset="95%" stopColor="#ff4d4f" stopOpacity={0} />{" "}
+            </linearGradient>
           </defs>
           <Area
             type="monotone"
             dataKey="key"
-            stroke="#8884d8"
-            fill="url(#gradient)"
+            stroke={negative ? "#ff4d4f" : "#8884d8"}
+            fill={negative ? "url(#negativeGradient)" : "url(#gradient)"}
             activeDot={false}
           />
         </AreaChart>

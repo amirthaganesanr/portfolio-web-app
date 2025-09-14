@@ -1,9 +1,9 @@
 export type CardProps = {
   title: string;
   titlePrefix?: string;
-  value: string | number;
+  value: number;
   prefix?: string;
-  indicator?: string | number;
+  indicator: number;
   symbol?: string;
   symbolName?: string;
   sparkLine: number[];

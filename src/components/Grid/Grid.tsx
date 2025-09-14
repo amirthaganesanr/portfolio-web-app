@@ -7,8 +7,9 @@ import type { SparkLineItem } from "@/types/Instrument.types";
 
 const CardCellRenderer: React.FC<CardCellRendererProps> = (params) => {
   const data = params?.data?.sparkline?.map((s: SparkLineItem) => s.level);
+  const negativeValue = params?.data?.pnl < 0;
 
-  return <LineChart data={data} height={40} />;
+  return <LineChart data={data} height={40} negative={negativeValue} />;
 };
 
 const Grid: React.FC<GridProps> = ({ rowData, colDefs }) => {

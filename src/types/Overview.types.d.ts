@@ -5,7 +5,7 @@ export type OverviewProps = {
 export type OverviewItem = {
   value: number;
   pnl: number;
-  symbol: string;
+  symbol?: string;
   data: number[];
 };
 
