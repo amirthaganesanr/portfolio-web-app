@@ -10,9 +10,8 @@ const Card: React.FC<CardProps> = ({
   indicator,
   symbol,
   symbolName,
+  sparkLine,
 }) => {
-  const data = [1, 2, 3, 4, 5, 4, 3, 2, 5, 6];
-
   return (
     <>
       <div className={styles.tile}>
@@ -37,7 +36,7 @@ const Card: React.FC<CardProps> = ({
           <span className={styles["tile__symbol-name"]}>{symbolName}</span>
         </div>
         <div className={styles["tile__line-chart"]}>
-          <LineChart data={data} height={100} />
+          <LineChart data={sparkLine} height={100} />
         </div>
       </div>
     </>

@@ -6,4 +6,5 @@ export type CardProps = {
   indicator?: string | number;
   symbol?: string;
   symbolName?: string;
+  sparkLine: number[];
 };

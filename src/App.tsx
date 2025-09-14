@@ -7,12 +7,18 @@ ModuleRegistry.registerModules([AllCommunityModule]);
 
 import { useInstrumentsStore } from "./store/instrumentsStore";
 import { useFetchInstruments } from "./hooks/useFetchInstruments";
+import Overview from "./components/Overview/Overview";
 
 function App() {
   const { instruments } = useInstrumentsStore();
   useFetchInstruments();
 
-  return <Grid rowData={instruments} colDefs={colDefs} />;
+  return (
+    <>
+      <Overview title="Investor" />
+      <Grid rowData={instruments} colDefs={colDefs} />
+    </>
+  );
 }
 
 export default App;
