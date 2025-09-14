@@ -1,4 +1,4 @@
-.tile {
+.card {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -9,18 +9,18 @@
   width: 250px;
   box-shadow: 0 2px 4px var(--body-color), 0 8px 16px var(--body-color);
 }
-.tile__value-container {
+.valueContainer {
   display: flex;
   justify-content: space-between;
 }
 
-.tile__title-container {
+.titleContainer {
   min-width: 120px;
   display: flex;
   justify-content: space-between;
 }
 
-.tile__indicator {
+.indicator {
   min-width: none;
   background-color: #9272c5;
   border-radius: 12px;
@@ -29,23 +29,23 @@
   font-size: 12px;
 }
 
-.tile__indicator-negative {
+.indicatorNegative {
   background-color: #f8d7da;
   color: #721c24;
 }
 
-.tile__title {
+.title {
   margin-left: -6px;
   color: grey;
   font-size: 12px;
 }
 
-.tile__value {
+.value {
   font-size: 24px;
   font-weight: 500;
 }
 
-.tile__symbol-container {
+.symbolContainer {
   background-color: whitesmoke;
   border-radius: 12px;
   padding: 2px 4px;

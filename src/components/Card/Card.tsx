@@ -16,34 +16,32 @@ const Card: React.FC<CardProps> = ({
   const negativeValue = indicator < 0;
   return (
     <>
-      <div className={styles.tile}>
-        <div className={styles["tile__title-container"]}>
-          <span className={styles["tile__title"]}>
+      <div className={styles.card}>
+        <div className={styles.titleContainer}>
+          <span className={styles.title}>
             {titlePrefix}
             {title}
           </span>
           <span
-            className={`${styles["tile__indicator"]} ${
-              negativeValue ? styles["tile__indicator-negative"] : ""
+            className={`${styles.indicator} ${
+              negativeValue ? styles.indicatorNegative : ""
             }`}
           >
             {formatNumber(indicator)}
           </span>
         </div>
-        <div className={styles["tile__value-container"]}>
-          <span className={styles["tile__value"]}>
+        <div className={styles.valueContainer}>
+          <span className={styles.value}>
             {prefix ? `${prefix} ${formatNumber(value)}` : formatNumber(value)}
           </span>
         </div>
         {symbol && (
-          <div className={styles["tile__symbol-container"]}>
-            <span className={styles["tile__symbol"]}>({symbol}) </span>
-            <span className={styles["tile__symbol-name"]}>{symbolName}</span>
+          <div className={styles.symbolContainer}>
+            <span>({symbol}) </span>
+            <span>{symbolName}</span>
           </div>
         )}
-        <div className={styles["tile__line-chart"]}>
-          <LineChart data={sparkLine} height={100} negative={negativeValue} />
-        </div>
+        <LineChart data={sparkLine} height={100} negative={negativeValue} />
       </div>
     </>
   );
