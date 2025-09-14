@@ -1,9 +1,6 @@
 import Grid from "./components/Grid/Grid";
 
-import { AllCommunityModule, ModuleRegistry } from "ag-grid-community";
 import { colDefs } from "./utils/constants";
-
-ModuleRegistry.registerModules([AllCommunityModule]);
 
 import Overview from "./components/Overview/Overview";
 import { useFetchInstruments } from "./hooks/useFetchInstruments";
